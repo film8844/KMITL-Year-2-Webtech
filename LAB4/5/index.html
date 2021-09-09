@@ -1,0 +1,227 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX5</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+        crossorigin="anonymous"></script>
+
+
+</head>
+
+<body class="bg-light">
+
+    <div class="row my-4">
+        <div class="col d-flex justify-content-center">
+            <h1>
+                Film Fast Foods
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container d-flex">
+            <div class="col-8">
+                <div class="card m-3 " style="width: 100%;">
+                    <div class="row g-0">
+                        <div class="col-md-3">
+                            <img src="img/pizza.jpeg" class="img-fluid rounded-start" style="height: 200px;" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body">
+                                <h2 class="card-title" id="pizza">Pizza</h2>
+                                <p class="card-text"><small class="text-muted">Dlivery by Film Fast Foods</small></p>
+                            </div>
+                            <div class="card-body text-end">
+                                <button onclick="add(document.getElementById('pizza').innerHTML)"
+                                    class="btn btn-warning">Add Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card m-3 " style="width: 100%;">
+                    <div class="row g-0">
+                        <div class="col-md-3">
+                            <img src="img/nodle.jpeg" class="img-fluid rounded-start" style="height: 200px;" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body">
+                                <h2 class="card-title" id="nodle">Noodles</h2>
+                                <p class="card-text"><small class="text-muted">Dlivery by Film Fast Foods</small></p>
+                            </div>
+                            <div class="card-body text-end">
+                                <button onclick="add(document.getElementById('nodle').innerHTML)"
+                                    class="btn btn-warning">Add Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card m-3 " style="width: 100%;">
+                    <div class="row g-0">
+                        <div class="col-md-3">
+                            <img src="img/burger.jpg" class="img-fluid rounded-start" style="height: 200px;" alt="...">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body">
+                                <h2 class="card-title" id="burger">Burgers</h2>
+                                <p class="card-text"><small class="text-muted">Dlivery by Film Fast Foods</small></p>
+                            </div>
+                            <div class="card-body text-end">
+                                <button onclick="add(document.getElementById('burger').innerHTML)"
+                                    class="btn btn-warning">Add Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card mx-5" style="width: 20rem;">
+                    <div class="card-header text-white bg-primary">
+                        รายการออเดอร์
+                    </div>
+                    <ul class="list-group list-group-flush" id="list">
+
+                    </ul>
+                    <!-- <button  class="btn btn-success">ยืนยัน</button> -->
+                    <div class="card-footer text-center">
+                        <button class="btn btn-danger" onclick="del()">ล้าง</button>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            ยืนยัน
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">ยอดรวมสินค้า</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group list-group-flush" id="list2">
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-between">
+                                <div>รายการสินค้า</div>
+                                <div>จำนวน</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                    <button type="button" class="btn btn-primary">ตกลง</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    var dict = Object()
+    function add(order) {
+        if (dict[order] == undefined) {
+            dict[order] = 1
+            var lis2 = document.getElementById('list2')
+            var item = document.createElement('li')
+            var div0 = document.createElement('div')
+            div0.classList.add('d-flex')
+            div0.classList.add('justify-content-between')
+            var div1 = document.createElement('div')
+            var text = document.createTextNode(order)
+            div1.appendChild(text)
+            var div2 = document.createElement('div')
+            var text = document.createTextNode("x" + dict[order])
+            div2.id = order + "m"
+            div2.appendChild(text)
+
+            div0.appendChild(div1)
+            div0.appendChild(div2)
+
+            item.classList.add("list-group-item");
+            item.appendChild(div0)
+            lis2.appendChild(item)
+
+
+        } else {
+            dict[order] += 1
+            document.getElementById(order + "m").innerHTML = 'x' + dict[order]
+        }
+        // alert(dict[order])
+        var lis = document.getElementById('list')
+
+        var item = document.createElement('li')
+        var div0 = document.createElement('div')
+        div0.classList.add('d-flex')
+        div0.classList.add('justify-content-between')
+        var div1 = document.createElement('div')
+        var text = document.createTextNode(order)
+        div1.appendChild(text)
+        var div2 = document.createElement('div')
+        var text = document.createTextNode("x1")
+        div2.appendChild(text)
+
+        div0.appendChild(div1)
+        div0.appendChild(div2)
+
+        item.classList.add("list-group-item");
+        item.appendChild(div0)
+        lis.appendChild(item)
+        console.log(dict[order]);
+    }
+
+    function removeAllChildNodes(parent) {
+        while (parent.firstChild) {
+            parent.removeChild(parent.firstChild);
+        }
+    }
+
+    function del() {
+        dict = {}
+        removeAllChildNodes(document.getElementById('list'))
+        removeAllChildNodes(document.getElementById('list2'))
+        var lis2 = document.getElementById('list2')
+        var item = document.createElement('li')
+        var div0 = document.createElement('div')
+        div0.classList.add('d-flex')
+        div0.classList.add('justify-content-between')
+        var div1 = document.createElement('div')
+        var text = document.createTextNode("รายการสินค้า")
+        div1.appendChild(text)
+        var div2 = document.createElement('div')
+        var text = document.createTextNode("จำนวน")
+        div2.appendChild(text)
+
+        div0.appendChild(div1)
+        div0.appendChild(div2)
+
+        item.classList.add("list-group-item");
+        item.appendChild(div0)
+        lis2.appendChild(item)
+    }
+</script>
+
+</html>

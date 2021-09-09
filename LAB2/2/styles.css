@@ -1,0 +1,12 @@
+td,
+th {
+    border-bottom: 2px solid black;
+}
+
+table {
+    border-spacing: 0px;
+}
+
+body {
+    font-family: 'Prompt', sans-serif;
+}

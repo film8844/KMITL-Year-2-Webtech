@@ -1,0 +1,239 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>EX4</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'IBM Plex Sans Thai', sans-serif;
+            background-color: wheat;
+        }
+
+        .flexbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* height: 100%; */
+            width: 100%;
+
+        }
+
+        .inbox {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            flex-wrap: wrap;
+            /* height: 100%; */
+
+            width: 816;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+        }
+
+        .b {
+            background-color: black;
+        }
+
+        .w {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="height: 100px;width: 100%;text-align: center;margin-top: 50px;">
+        <form id='form'>
+            <div class="ma">
+                <input type="text" min="2" placeholder="number" id="num">
+            </div>
+            <button type="submit">Generate</button>
+        </form>
+    </div>
+    <div class="flexbox">
+        <div id="tb">
+            <!-- <div class="inbox">
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+            </div>
+            <div class="inbox">
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+            </div>
+            <div class="inbox">
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+            </div>
+            <div class="inbox">
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+            </div>
+            <div class="inbox">
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+            </div>
+            <div class="inbox">
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+            </div>
+            <div class="inbox">
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+            </div>
+            <div class="inbox">
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+                <div class="box b"></div>
+                <div class="box w"></div>
+            </div> -->
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+
+    function removeAllChildNodes(parent) {
+        while (parent.firstChild) {
+            parent.removeChild(parent.firstChild);
+        }
+    }
+
+    var no = 0
+    form = document.getElementById('form')
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var num = document.getElementById('num').value
+        num = Number(num)
+
+        if (num > 64) {
+            num = 64
+        }
+
+        var row = parseInt(num / 8)
+        var last = num % 8
+
+        var page = document.getElementById('tb')
+        removeAllChildNodes(page)
+
+        var ta = document.createElement('div')
+        ta.classList.add("inbox")
+        var bbox = document.createElement('div')
+        bbox.classList.add("box")
+        bbox.classList.add("b")
+        var wbox = document.createElement('div')
+        wbox.classList.add("box")
+        wbox.classList.add("w")
+
+        for (let index = 0; index < row; index++) {
+            var ta = document.createElement('div')
+            ta.classList.add("inbox")
+            if (index % 2 == 0) {
+                for (let j = 0; j < 4; j++) {
+                    var wbox = document.createElement('div')
+                    wbox.classList.add("box")
+                    wbox.classList.add("w")
+                    ta.appendChild(wbox)
+                    var bbox = document.createElement('div')
+                    bbox.classList.add("box")
+                    bbox.classList.add("b")
+                    ta.appendChild(bbox)
+                }
+            } else {
+                for (let j = 0; j < 4; j++) {
+                    var bbox = document.createElement('div')
+                    bbox.classList.add("box")
+                    bbox.classList.add("b")
+                    ta.appendChild(bbox)
+                    var wbox = document.createElement('div')
+                    wbox.classList.add("box")
+                    wbox.classList.add("w")
+                    ta.appendChild(wbox)
+                }
+            }
+            page.appendChild(ta)
+
+        }
+
+        var ta = document.createElement('div')
+        ta.classList.add("inbox")
+        for (let i = 0; i < last; i++) {
+            if((row+1+i)%2 == 0){
+                var bbox = document.createElement('div')
+                    bbox.classList.add("box")
+                    bbox.classList.add("b")
+                    ta.appendChild(bbox)
+            } else {
+                var wbox = document.createElement('div')
+                    wbox.classList.add("box")
+                    wbox.classList.add("w")
+                    ta.appendChild(wbox)
+            }
+        }
+        page.appendChild(ta)
+
+
+    })
+</script>
+
+</html>

@@ -1,0 +1,36 @@
+body {
+    font-family: 'Prompt', sans-serif;
+    /* background-color: #FDEFEF; */
+}
+
+
+/* h1,
+h2 {
+    color: #CDBBA7;
+} */
+
+p,
+li {
+    font-size: 20px;
+    /* color: #DAD0C2; */
+}
+
+.left {
+    /* background-color: #cbb5fd; */
+    padding: 20px;
+    float: left;
+    width: 40%;
+}
+
+.cvphoto {
+    /* background-color: #ffffff; */
+    padding: 20px;
+    float: left;
+    width: 30%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

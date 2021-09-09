@@ -1,0 +1,159 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX3</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+        crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'IBM Plex Sans Thai', sans-serif;
+        }
+
+        .flexbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            height: 100%;
+            width: 100%;
+
+        }
+
+        .box {
+            height: 80%;
+            width: 80%;
+            justify-content: center;
+
+        }
+
+        .formbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin: 10px;
+            justify-content: space-center;
+        }
+
+        .ma {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flexbox">
+        <div class="box">
+            <form id='form'>
+                <div class="formbox">
+                    <div class="ma">
+                        <input type="text" min="5" placeholder="รหัสนักศึกษา" id="id">
+                    </div>
+                    <div class="ma">
+                        <input type="text" min="2" placeholder="ชื่อ" id="name">
+                    </div>
+                    <div class="ma">
+                        <input type="text" min="2" placeholder="นามสกุล" id="lname">
+                    </div>
+                    <button type="submit">ลงทะเบียน</button>
+
+                </div>
+            </form>
+
+            <div style="width: 100%;">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">ลำดับที่</th>
+                            <th scope="col">รหัสนักศึกษา</th>
+                            <th scope="col">ชื่อ</th>
+                            <th scope="col">นามสกุล</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tb">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+
+<script>
+
+    var no = 0
+    form = document.getElementById('form')
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+
+
+        var id = document.getElementById('id').value
+        var name = document.getElementById('name').value
+        var lastname = document.getElementById('lname').value
+
+        if (id == '' || name == '' || lastname == '') {
+            alert("fill all data!")
+        } else {
+            no = no + 1
+            var table = document.getElementById('tb')
+
+            var slot = document.createElement('tr')
+
+            var tno = document.createElement('td')
+            var text = document.createTextNode(no)
+            tno.appendChild(text)
+
+            var idt = document.createElement('td')
+            var text = document.createTextNode(id)
+            idt.appendChild(text)
+
+            var namet = document.createElement('td')
+            var text = document.createTextNode(name)
+            namet.appendChild(text)
+
+            var lnamet = document.createElement('td')
+            var text = document.createTextNode(lastname)
+            lnamet.appendChild(text)
+
+            slot.appendChild(tno)
+            slot.appendChild(idt)
+            slot.appendChild(namet)
+            slot.appendChild(lnamet)
+
+            table.appendChild(slot)
+
+            document.getElementById('id').value = ""
+            document.getElementById('name').value = ""
+            document.getElementById('lname').value = ""
+        }
+
+
+
+    })
+</script>
+
+</html>

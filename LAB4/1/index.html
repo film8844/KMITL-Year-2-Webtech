@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX1</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'IBM Plex Sans Thai', sans-serif;
+        }
+    </style>
+</head>
+<style>
+    .center{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div class="center">
+        <div class="box">
+            <form id=form>
+                <div>
+                    <label for="">Value 1 :</label>
+                    <input type="number" id="1">
+                </div>
+                <div>
+                    <label for="">Value 2 :</label>
+                    <input type="number" id="2">
+                </div>
+                <button type="submit">Calculate</button>
+        
+            </form>
+            <h5 id="result"></h5>
+        </div>
+
+    </div>
+    
+
+</body>
+
+<script>
+    
+    form = document.getElementById('form')
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var val1 = document.getElementById('1').value
+        var val2 = document.getElementById('2').value
+        var sum = Number(val1)+Number(val2) 
+
+        document.getElementById('result').innerHTML = "Result : " +sum
+        
+    })
+</script>
+
+</html>

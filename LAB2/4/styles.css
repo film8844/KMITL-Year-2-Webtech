@@ -1,0 +1,80 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    background-color: #333333;
+    color: #df2b46;
+}
+
+table {
+    color: white;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+th,
+td {
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+.table {
+    border-radius: 15px;
+    background-color: #808080;
+}
+
+h1,
+p {
+    color: #FFC93C;
+}
+
+.mid {
+    text-align: left;
+    margin: auto;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    /* border: 3px solid green; */
+    padding: 10px;
+}
+
+.container {
+    width: 100%;
+    background-color: #ddd;
+}
+
+.skills {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 50px;
+    color: white;
+}
+
+.Depp {
+    width: 60%;
+    background-color: #04AA6D;
+}
+
+.Washington {
+    width: 90%;
+    background-color: #2196F3;
+}
+
+.Pitt {
+    width: 50%;
+    background-color: #f44336;
+}
+
+.Crowe {
+    width: 80%;
+    background-color: yellowgreen;
+}
+
+.Cruise {
+    width: 75%;
+    background-color: palevioletred;
+}

@@ -1,0 +1,74 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    background-color: #333333;
+    color: #df2b46, #FFC93C;
+}
+
+.mid {
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    /* border: 3px solid green; */
+    padding: 10px;
+}
+
+.row a {
+    margin: 30;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+a {
+    color: #FFC93C;
+    flex: 10 10 auto;
+}
+
+a:link,
+a:visited {
+    color: #FFC93C;
+    text-decoration: unset;
+    cursor: pointer;
+}
+
+h1 {
+    color: #df2b46;
+    font-size: 70px;
+    margin-top: 0;
+}
+
+footer {
+    position: fixed;
+    padding: 10;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.upper {
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    /* border: 1px red solid; */
+    padding: 5px;
+    /* this */
+}
+
+.upper>a {
+    flex: 1 1 auto;
+    /* border: 1px red solid; */
+    text-align: center;
+    margin: 5px;
+    /* and that, will result in a 10px gap */
+}

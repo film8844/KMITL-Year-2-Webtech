@@ -1,0 +1,119 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX4</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            margin: 0;
+            background-color: #333333;
+        }
+
+        div.container {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 100vh;
+
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #333333;
+        }
+
+        div.box {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: flex-end;
+            height: 50px;
+            background-color: brown;
+            margin: 10px;
+            padding: 10px;
+            color: white;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="main" style="width: 10%;">
+            <div class="box" id="1">
+                Math
+            </div>
+            <div class="box" id="2">
+                Thai
+            </div>
+            <div class="box" id="3">
+                English
+            </div>
+            <div class="box" id="4">
+                Science
+            </div>
+            <div class="box" id="5">
+                Social
+            </div>
+        </div>
+        <button onclick="chart()">View Chart</button>
+    </div>
+
+    <script>
+        function chart() {
+            const b1 = document.getElementById('1')
+            const b2 = document.getElementById('2')
+            const b3 = document.getElementById('3')
+            const b4 = document.getElementById('4')
+            const b5 = document.getElementById('5')
+
+            const main = document.getElementById('main')
+
+            if (main.style.width === '80%') {
+                console.log(main.style.width);
+                main.style.width = '10%'
+                b1.style.width = '100%'
+                b1.innerHTML = 'Math'
+                b2.style.width = '100%'
+                b2.innerHTML = 'Thai'
+                b3.style.width = '100%'
+                b3.innerHTML = 'English'
+                b4.style.width = '100%'
+                b4.innerHTML = 'Science'
+                b5.style.width = '100%'
+                b5.innerHTML = 'Social'
+                
+            } else {
+                main.style.width = '80%'
+                b1.style.width = '100%'
+                b1.innerHTML = 'Math 100%'
+                b2.style.width = '70%'
+                b2.innerHTML = 'Thai 70%'
+                b3.style.width = '50%'
+                b3.innerHTML = 'English 50%'
+                b4.style.width = '80%'
+                b4.innerHTML = 'Science 80%'
+                b5.style.width = '30%'
+                b5.innerHTML = 'Social 30%'
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
