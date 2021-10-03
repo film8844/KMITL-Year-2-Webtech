@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EX3</title>
+    <title>EX4</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
@@ -39,11 +39,10 @@
         }
 
 
+
         .err {
             color: red;
         }
-
-
     </style>
 </head>
 
@@ -51,58 +50,75 @@
     <?php
     // define variables and set to empty values
     $nameErr = $lnameErr = $addressErr = $tumErr = $idErr = $aumErr = $provinceErr = $zipErr = $phoneErr = "";
+    $err = false;
+    $n = 1;
     $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (strlen($_POST["name"]) < 5) {
             $nameErr = "err";
+            $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
         } else {
             $name = test_input($_POST["name"]);
         }
 
         if (strlen($_POST["lname"]) < 5) {
             $lnameErr = "err";
+            $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
         } else {
             $lname = test_input($_POST["lname"]);
         }
 
         if (strlen($_POST["id"]) < 5) {
             $idErr = "err";
+            $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
         } else {
             $id = test_input($_POST["id"]);
         }
         if (strlen($_POST["address"]) < 5) {
             $addressErr = "err";
+            $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
         } else {
             $address = test_input($_POST["address"]);
         }
 
         if (strlen($_POST["tum"]) < 5) {
             $tumErr = "err";
+            $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
         } else {
             $tum = test_input($_POST["tum"]);
         }
 
         if (strlen($_POST["aum"]) < 5) {
             $aumErr = "err";
+            $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
         } else {
             $aum = test_input($_POST["aum"]);
         }
         if (strlen($_POST["province"]) < 5) {
             $provinceErr = "err";
+            $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
         } else {
             $province = test_input($_POST["province"]);
         }
         if (strlen($_POST["zip"]) < 5) {
             $zipErr = "err";
+            $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
         } else {
             $zip = test_input($_POST["zip"]);
         }
         if (strlen($_POST["phone"]) < 5) {
             $phoneErr = "err";
+            $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
         } else {
             $phone = test_input($_POST["phone"]);
         }
+        $data = array(
+            "id" => $id,
+            "name"=>$name,
+            "lname"=>$lname
+        );
+        file_put_contents("counter.txt", $data);
     }
 
     function test_input($data)
@@ -117,7 +133,7 @@
     <div class="flexbox">
         <div class="m-5 text-white p-4 box">
             <h1>Form</h1>
-            <form method="post" action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF"]); ?>">
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 <div class="form-group mb-3 <?php echo $idErr ?>">
                     <label for="inputAddress">หมายเลขบัตรประชาชน</label>
                     <input type="text" name="id" value="1234567890123" class="form-control" id="inputid" max="13" placeholder="x xxxx xxxxx xx x">
@@ -164,25 +180,8 @@
         </div>
     </div>
     <?php
-    echo "<h2>Your Input:</h2>";
-    echo $name;
-    echo "<br>";
-    echo $lname;
-    echo "<br>";
-    echo $id;
-    echo "<br>";
-    echo $address;
-    echo "<br>";
-    echo $tum;
-    echo "<br>";
-    echo $aum;
-    echo "<br>";
-    echo $province;
-    echo "<br>";
-    echo $phone;
-
-
-
+    $counter = file_get_contents("counter.txt");
+    echo "You are the $counter person to view this page..";
     ?>
 
 </body>
