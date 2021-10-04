@@ -50,8 +50,6 @@
     <?php
     // define variables and set to empty values
     $nameErr = $lnameErr = $addressErr = $tumErr = $idErr = $aumErr = $provinceErr = $zipErr = $phoneErr = "";
-    $err = false;
-    $n = 1;
     $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -61,14 +59,12 @@
         } else {
             $name = test_input($_POST["name"]);
         }
-
         if (strlen($_POST["lname"]) < 5) {
             $lnameErr = "err";
             $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
         } else {
             $lname = test_input($_POST["lname"]);
         }
-
         if (strlen($_POST["id"]) < 5) {
             $idErr = "err";
             $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
@@ -81,14 +77,12 @@
         } else {
             $address = test_input($_POST["address"]);
         }
-
         if (strlen($_POST["tum"]) < 5) {
             $tumErr = "err";
             $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
         } else {
             $tum = test_input($_POST["tum"]);
         }
-
         if (strlen($_POST["aum"]) < 5) {
             $aumErr = "err";
             $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
@@ -173,34 +167,62 @@
             </form>
         </div>
     </div>
-    <?php
-    echo "<h2>Your Input: $n</h2>";
-    if ($err) {
-        echo "<h2>Error</h2>";
-    } else {
-        echo $name;
-        echo "<br>";
-        echo $lname;
-        echo "<br>";
-        echo $id;
-        echo "<br>";
-        echo $address;
-        echo "<br>";
-        echo $tum;
-        echo "<br>";
-        echo $aum;
-        echo "<br>";
-        echo $province;
-        echo "<br>";
-        echo $phone;
-    }
-    $n++;
-    $err = false;
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr class="table-dark">
+                    <th scope="col">ลำดับ</th>
+                    <th scope="col">หมายเลขบัตรประชาชน</th>
+                    <th scope="col">ชื่อ</th>
+                    <th scope="col">นามสกุล</th>
+                    <th scope="col">ที่อยู่</th>
+                    <th scope="col">ตำบล</th>
+                    <th scope="col">อำเถอ</th>
+                    <th scope="col">จังหวัด</th>
+                    <th scope="col">รหัสไปรษณีย์</th>
+                    <th scope="col">หมายเลขโทรศัพท์</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <?php
+                    echo "<td>";
+                    echo $id;
+                    echo "</td>";
+                    echo "<td>";
+                    echo $lname;
+                    echo "</td>";
+                    echo "<td>";
+                    echo $name;
+                    echo "</td>";
+                    echo "<td>";
+                    echo $address;
+                    echo "</td>";
+                    echo "<td>";
+                    echo $tum;
+                    echo "</td>";
+                    echo "<td>";
+                    echo $aum;
+                    echo "</td>";
+                    echo "<td>";
+                    echo $province;
+                    echo "</td>";
+                    echo "<td>";
+                    echo $zip;
+                    echo "</td>";
+                    echo "<td>";
+                    echo $phone;
+                    echo "</td>";
+
+                    ?>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 
 
-
-    ?>
 
 </body>
 

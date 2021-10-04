@@ -59,9 +59,6 @@
 </head>
 
 <body>
-
-
-
     <div class="container box">
         <div class="col text-center pt-5">
             <h1>
@@ -69,7 +66,7 @@
                 // รหัสนศ.
                 $id = 63070234;
                 $id = $id % 10;
-                if ($id == 0){
+                if ($id == 0) {
                     $id = 10;
                 }
 

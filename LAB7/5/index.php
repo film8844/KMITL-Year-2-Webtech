@@ -20,8 +20,33 @@
 </head>
 
 <body>
-    <div class="container">
-        
+    <div class="container mt-5">
+        <table class="table text-center table-bordered">
+            <thead>
+                <tr class="table-active">
+                    <th scope="col">X</th>
+                    <?php
+                    for ($i = 1; $i <= 12; $i++) {
+                        echo "<th scope=\"col\">$i</th>";
+                    }
+                    ?>
+
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                for ($i = 1; $i <= 12; $i++) {
+                    echo "<tr><td class=\"table-active\">$i</td>";
+                    for ($j = 1; $j <= 12; $j++) {
+                        $ij = $i * $j;
+                        echo "<td class=\"\">$ij</td>";
+                    }
+                }
+                echo "</tr>";
+                ?>
+
+            </tbody>
+        </table>
     </div>
 </body>
 
