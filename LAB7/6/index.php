@@ -13,6 +13,18 @@
     <style>
         body {
             font-family: 'Mitr', sans-serif;
+            background-color: wheat;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        div#masonry {
+            column-count: 4;
+            column-gap: 15px;
         }
     </style>
 </head>
@@ -20,14 +32,14 @@
 <body>
     <div class="container text-center mt-4">
         <h1>Gallerry</h1>
-        <div class="row">
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
+        <div class="flexbox" id="masonry">
+            <?php
+            for ($i = 1; $i < 21; $i++) {
+                echo "<a href=\"https://bukorree-live.web.app/img/$i.jpg\"><img src=\"https://bukorree-live.web.app/img/$i.jpg\"></a>";
+            }
+            ?>
         </div>
     </div>
-
 </body>
 
 </html>
