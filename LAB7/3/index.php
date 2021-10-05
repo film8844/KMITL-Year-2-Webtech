@@ -26,24 +26,18 @@
 
         }
 
-        .color {
-            background-color: aquamarine;
-        }
-
         .flexbox {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100%;
-
         }
+
 
 
         .err {
             color: red;
         }
-
-
     </style>
 </head>
 
@@ -56,50 +50,55 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (strlen($_POST["name"]) < 5) {
             $nameErr = "err";
+            $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
         } else {
             $name = test_input($_POST["name"]);
         }
-
         if (strlen($_POST["lname"]) < 5) {
             $lnameErr = "err";
+            $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
         } else {
             $lname = test_input($_POST["lname"]);
         }
-
         if (strlen($_POST["id"]) < 5) {
             $idErr = "err";
+            $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
         } else {
             $id = test_input($_POST["id"]);
         }
         if (strlen($_POST["address"]) < 5) {
             $addressErr = "err";
+            $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
         } else {
             $address = test_input($_POST["address"]);
         }
-
         if (strlen($_POST["tum"]) < 5) {
             $tumErr = "err";
+            $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
         } else {
             $tum = test_input($_POST["tum"]);
         }
-
         if (strlen($_POST["aum"]) < 5) {
             $aumErr = "err";
+            $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
         } else {
             $aum = test_input($_POST["aum"]);
         }
         if (strlen($_POST["province"]) < 5) {
             $provinceErr = "err";
+            $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
         } else {
             $province = test_input($_POST["province"]);
         }
         if (strlen($_POST["zip"]) < 5) {
             $zipErr = "err";
+            $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
         } else {
             $zip = test_input($_POST["zip"]);
         }
         if (strlen($_POST["phone"]) < 5) {
             $phoneErr = "err";
+            $name = $lname = $address = $tum = $id = $aum = $province = $zip = $phone = "";
         } else {
             $phone = test_input($_POST["phone"]);
         }
@@ -117,7 +116,7 @@
     <div class="flexbox">
         <div class="m-5 text-white p-4 box">
             <h1>Form</h1>
-            <form method="post" action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF"]); ?>">
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 <div class="form-group mb-3 <?php echo $idErr ?>">
                     <label for="inputAddress">หมายเลขบัตรประชาชน</label>
                     <input type="text" name="id" value="1234567890123" class="form-control" id="inputid" max="13" placeholder="x xxxx xxxxx xx x">
@@ -163,27 +162,9 @@
             </form>
         </div>
     </div>
-    <?php
-    echo "<h2>Your Input:</h2>";
-    echo $name;
-    echo "<br>";
-    echo $lname;
-    echo "<br>";
-    echo $id;
-    echo "<br>";
-    echo $address;
-    echo "<br>";
-    echo $tum;
-    echo "<br>";
-    echo $aum;
-    echo "<br>";
-    echo $province;
-    echo "<br>";
-    echo $phone;
 
 
 
-    ?>
 
 </body>
 
