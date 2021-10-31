@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax Highlighting</title>
+    <link href="blackboard.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,400;1,500&family=Taviraj&display=swap"
+        rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+
+        }
+
+        body {
+            font-family: 'Taviraj', serif;
+        }
+
+        pre {
+            border-radius: 10px;
+            background-color: #222;
+        }
+
+        .btn-learn {
+            border-radius: 20px;
+            color: black;
+            background-color: white;
+        }
+
+        .btn {
+            border-radius: 20px;
+        }
+
+        .btn-learn:hover {
+            color: white;
+            background-color: black;
+        }
+
+        .content-text p {
+            margin-left: 2rem;
+        }
+
+        .fab:hover {
+            color: black;
+        }
+    </style>
+
+    <script src="https://kit.fontawesome.com/7763e5ee12.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <div class="container fixed-top">
+        <header class="bg-white d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="index.html"
+                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <i class="fab fa-python" style="font-size: 2rem;"> </i>
+                <span class="fs-4">Python Flask</span>
+            </a>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item "><a href="#start" class="btn btn-dark btn-learn" aria-current="page">Start Learn
+                    </a>
+                </li>
+            </ul>
+        </header>
+    </div>
+
+    <!-- hero -->
+    <div class="container">
+
+        <div class="px-4 pt-5 my-5 text-center border-bottom">
+            <img class="d-block mx-auto mb-4" src="./img/Flask.png" alt="" width="300">
+            <h1 class="display-4 fw-bold">พัฒนา Web application ด้วย Python กัน! </h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">เรียนรู้ Flask micro web framework ที่เขียนด้วยภาษา python</p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-3">
+                    <a href="#start" class="btn btn-dark btn-lg px-4 me-sm-3">เริ่มกันเลย <i
+                            class="fas fa-caret-down"></i></a>
+                    <a class="btn btn-outline-secondary btn-lg px-4">Github <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="overflow-hidden" style="max-height: 30vh;">
+                <div class="container px-5">
+                    <img src="./img/fw.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"
+                        width="700" height="500" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <!-- contant -->
+    <div id="" class="container">
+        <div class="col">
+            <section class="">
+                <div class="container">
+                    <div class="content-text">
+                        <h2 class="h2">ทำความรู้จัก Flask</h2>
+                        <p>Flask คือ micro web framework ที่เขียนด้วย python. Flask ถูกจัดให้อยู่ใน microframework
+                            เพราะว่าไม่ต้องการใช้เครื่องมือหรือไลบารี่เฉพาะ ดังนั้นจึงมีแค่ที่จำเป็นเลยเล็ก
+                            แต่เขียนไม่กี่บรรทัดก็รันได้เลย Flask ไม่มีทั้ง database หรือการตรวจการตรวจแบบฟอร์ม (form
+                            validation) แต่ยังรองรับ extensions ที่ช่วยเพิ่มความสามารถอื่นได้ ถ้ารองรับการใช้กับ Flask
+                            ตัวอย่างเว็บ ที่นำ Flask ไปใช้ คือ Pinterest LinkedIn เป็นต้น </p>
+                    </div>
+                    <div class="row justify-content-evenly align-items-center">
+                        <div class="col-lg-4 text-center">
+                            <i class="fab fa-pinterest" style="font-size: 6rem; color: #E60023;"></i>
+
+                            <h2>Pinterest</h2>
+                            <p>ปักหมุดภาพและวิดีโอที่เราสนใจและหลงรัก จากเว็บไซต์ต่างๆที่เราพบเจอ
+                                และจากภาพและวิดีโอของเราเอง</p>
+
+                        </div><!-- /.col-lg-4 -->
+                        <div class="col-lg-4 text-center">
+                            <i class="fab fa-linkedin" style="font-size: 6rem; color: #0e76a8;"></i>
+                            <h2>LinkedIn</h2>
+                            <p>เครือข่ายมืออาชีพบนอินเทอร์เน็ตที่ใหญ่ที่สุดในโลก
+                                เพื่อหางานที่เหมาะสมหรือการฝึกงานและเรียนรู้ทักษะที่คุณต้องการประสบความสําเร็จในอาชีพของคุณ.
+                            </p>
+
+                        </div><!-- /.col-lg-4 -->
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="start" class="mt-5">
+                <div class="container">
+                    <div class="content-text">
+                        <h2 class="h2">Installation for start Flask project</h2>
+                        <h5>
+                            <ul>
+
+                                <li>ติดตั้ง Python <a href="https://www.python.org/downloads/"> <span
+                                            class="badge rounded-pill bg-warning">version 3.6 or Newer</span> </a> </li>
+
+                                <li>Create Virtual environments </li>
+
+                                <pre><code>$ mkdir flaskproject
+$ cd flaskproject
+$ python -m venv fw
+</code></pre>
+                                <p>fw คือชื่อของ Virtual Environment ของโปรเจคท์นี้</p>
+                                <p>note: สำหรับ <span class="badge bg-primary"> macOS/linux </span> ให้ใช้คำสั่ง <span
+                                        class="badge rounded-pill bg-black">python3 -m venv env</span> </p>
+                                <li>Activate Virtual environments</li>
+                                <pre><code  >$ fw\scripts\activate</code></pre>
+                                <p>note2: สำหรับ <span class="badge bg-primary"> macOS/linux </span> ให้ใช้คำสั่ง <span
+                                        class="badge rounded-pill bg-black">. env/bin/activate</span></p>
+                                <li>ติดตั้ง Flask</li>
+                                <pre><code  >$ pip install flask</code></pre>
+                            </ul>
+                            </h1>
+
+
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="" class="mt-5">
+                <div class="container">
+                    <div class="content-text">
+                        <h2 class="h2">1. เริ่มต้น Setup project</h2>
+                        <br>
+                        <div class="row mb-3">
+                            <div class="col-md-5">
+                                <p>1.1 เปิด Visual Studio Code ขึ้นมา Open Folder เพื่อทำการเปิดโฟลเดอร์
+                                    flaskproject</p>
+                            </div>
+                            <div class="col-md-7">
+                                <img src="./img/st-1.png" width="100%" alt="" srcset="">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-5">
+                                <p>1.2 คลิ๊ก View → Command Palette…</p>
+                            </div>
+                            <div class="col-7">
+                                <div class="text-center mb-3">
+                                    <img src="./img/st-2.png" width="100%" alt="" srcset="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-5">
+                                <p>1.3 เลือก Python: Select Interpreter</p>
+                            </div>
+                            <div class="col-7">
+                                <div class="text-center mb-3">
+                                    <img src="./img/st-3.png" width="100%" alt="" srcset="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-5">
+                                <p>
+                                    1.4 คลิ๊ก View → Command Palette…
+                                </p>
+                            </div>
+                            <div class="col-7">
+                                <div class="text-center mb-3">
+                                    <img src="./img/st-4.png" width="100%" alt="" srcset="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-5">
+                                <p>
+                                    1.5 จากนั้นทำการคลิ๊ก Debug → Start Debugging อีกครั้ง
+                                </p>
+                            </div>
+                            <div class="col-7">
+                                <div class="text-center mb-3">
+                                    <img src="./img/st-5.png" width="100%" alt="" srcset="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-5">
+                                <p>
+                                    1.6 เลือก Python
+                                </p>
+                            </div>
+                            <div class="col-7">
+                                <div class="text-center mb-3">
+                                    <img src="./img/st-6.png" width="100%" alt="" srcset="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-5">
+                                <p>
+                                    1.7 เลือก Flask
+                                </p>
+                            </div>
+
+                            <div class="col-7">
+                                <div class="text-center mb-3">
+                                    <img src="./img/st-7.png" width="100%" alt="" srcset="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-5">
+                                <p>
+                                    1.8 จะปรากฏชื่อไฟล์ app.py ซึ่งเป็นชื่อ Default ของ Flask กด Enter
+                                </p>
+                            </div>
+
+                            <div class="col-7">
+                                <div class="text-center mb-3">
+                                    <img src="./img/st-8.png" width="100%" alt="" srcset="">
+                                </div>
+                            </div>
+                        </div>
+                        <h4>
+                            เป็นอันเสร็จสิ้นขั้นตอนนี้
+                        </h4>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="" class="mt-5">
+                <div class="container">
+                    <div class="">
+                        <h2 class="h2">สร้างไฟล์ app.py ทำการเขียนโค้ดดังนี้</h2>
+                        <pre><code data-language="python">
+from flask import Flask
+                                    
+app = Flask(__name__)
+                                                    
+@app.route("/")
+def hello_world():
+    return "Hello My First Flask Project"
+
+if __name__ == '__main__':
+    app.run(debug=True)
+</code></pre>
+
+                        <div class="text-start mt-3">
+                            <h3>อธิบายโค้ด</h3>
+                            <div class="row mb-3">
+                                <div class="col-6">
+                                    <pre><code data-language="python">from flask import Flask</code></pre>
+                                    <p>บรรทัดแรกจะเป็นการอิมพอร์ต Flask จากโมดูล flask เพื่อสร้าง Flask
+                                        เว็บเซิร์ฟเวอร์ของ
+                                        Flask App จากโมดูล Flask</p>
+                                </div>
+                                <div class="col-6">
+                                    <pre><code data-language="python">app = Flask(__name__)</code></pre>
+                                    <p>คำสั่งนี้จะใช้บ่งบอกว่า ไฟล์นี้คือไฟล์ Main ที่จะเอาไว้รัน Flask App
+                                        ของเรานั่นเอง
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <pre><code data-language="python">@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"</code></pre>
+                                    <p>ส่วนต่อมาจะเป็นการสร้าง URL เพื่อทำการชี้หรือ Map ไปที่ URLs ที่ต้องการ
+                                        โดยในที่นี้ จะเป็นหน้า URL เริ่มต้น ซึ่งส่วนใหญ่หรือแทบจะทุกเว็บจะใช้ URL
+                                        นี้เป็นหน้าโฮมเพจหรือที่อยู่ของเว็บไซต์</p>
+                                </div>
+                                <div class="col-6">
+                                    <pre><code data-language="python">if __name__ == '__main__':
+    app.run(debug=True)</code></pre>
+                                    <p>ส่วนสุดท้ายจะเป็นการรัน Flask และทำการเปิด Debug Mode เพื่อใช้สำหรับติดตาม Error
+                                        ต่าง ๆ ได้
+
+                                    </p>
+                                    <p>ปล. เวลา Deploy ให้ปิด Debug Mode โดยใช้ debug=False</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="" class="mt-5">
+                <div class="container">
+                    <h2>ทดลองรันโค้ดข้างต้น</h2>
+                    <pre><code data-language="python">$ flask run</code></pre>
+                    <p>โดยตัว Default ที่ผมกำลังรันอยู่ในตอนนี้คือ localhost หรือไอพีแอดเดรส 127.0.0.1 พอร์ต Default ของ
+                        Flask คือ 5000 สุดท้ายเมื่อรันแล้วทำการเปิดหน้าเว็บบราวเซอร์จะพบ 127.0.0.1:5000 </p>
+                    <div class="text-center mb-5">
+                        <img src="./img/run.png" width="80%" alt="" srcset="">
+                    </div>
+
+                    <p>เมื่อเราเข้าไปที่ หรือ http://localhost:5000/ ก็ได้หน้าเว็บมาแล้วเรียบร้อย
+                        และนี่ก็คือหน้าเว็บจริง ๆ
+                        ครับ โดยในหน้าเว็บนี้แสดงผลคำว่า “Hello My First Flask Project”
+                        ที่ผมได้เขียนฟังก์ชันจากนั้นทำการรีเทิร์น ข้อความนี้ออกมาที่ URL ที่เป็นหน้า Default
+                        คือหน้าเริ่มต้นของเว็บ ซึ่งปกติเราจะใช้หน้านี้เป็นหน้าโฮมเพจ </p>
+                    <div class="text-center mb-5">
+                        <img src="./img/webrun.png" width="80%" alt="" srcset="">
+                        <p>http://127.0.0.1:5000</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="" class="mt-5">
+                <div class="container">
+                    <h2>การเพิ่ม route และใส่ค่าลงไปใน url ได้เพื่อนำค่านั้นไปใช้ </h2>
+                    <p>เพิ่ม code ส่วนนี้เข้าไป ใน app.py</p>
+                    <pre><code data-language="python">@app.route('/hello/<name>')
+def hello_name(name):
+    return "hello {}. ".format(name)</code></pre>
+
+                    <p>จะได้</p>
+                    <pre><code data-language="python">
+from flask import Flask
+                                                            
+app = Flask(__name__)
+                                                                            
+@app.route("/")
+def hello_world():
+    return "Hello My First Flask Project"
+
+@app.route('/hello/< name>')
+def hello_name(name):
+    return "hello {}. ".format(name)
+                        
+if __name__ == '__main__':
+    app.run(debug=True)</code></pre>
+
+                    <p>แล้ว ลอง http://localhost:5000/hello/ชื่อ หรือ ข้อความที่่ต้องการให้แสดง
+                        ก็จะได้</p>
+                    <div class="text-center mb-5">
+                        <img src="./img/webrun.png" width="80%" alt="" srcset="">
+                        <p>http://127.0.0.1:5000</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="bootstrap" viewBox="0 0 118 94">
+            <title>Bootstrap</title>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z">
+            </path>
+        </symbol>
+        <symbol id="facebook" viewBox="0 0 16 16">
+            <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z">
+            </path>
+        </symbol>
+        <symbol id="instagram" viewBox="0 0 16 16">
+            <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
+            </path>
+        </symbol>
+        <symbol id="twitter" viewBox="0 0 16 16">
+            <path
+                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
+            </path>
+        </symbol>
+    </svg>
+    <div class="container mt-auto">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center  py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-muted">© 2021 Bukorree Madthing 63070234</p>
+
+            <a href="/"
+                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <img src="./img/Memoji/รูปภาพ 6.png" width="72" alt="" srcset="">
+            </a>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" target="_blank" href="https://www.instagram.com/_film_z/"><svg
+                            class="bi" width="24" height="24">
+                            <use xlink:href="#instagram"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="text-muted" target="_blank"
+                        href="https://www.facebook.com/profile.php?id=100002515003562"><svg class="bi" width="24"
+                            height="24">
+                            <use xlink:href="#facebook"></use>
+                        </svg></a></li>
+            </ul>
+        </footer>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="rainbow.js"></script>
+    <script src="generic.js"></script>
+    <script src="language/python.js"></script>
+</body>
+
+</html>
