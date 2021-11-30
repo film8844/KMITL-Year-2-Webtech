@@ -12,7 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.go;ogleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,400;1,500&family=Taviraj&display=swap"
         rel="stylesheet">
@@ -21,6 +21,10 @@
         html {
             scroll-behavior: smooth;
 
+        }
+
+        section {
+            padding-top: 5rem;
         }
 
         body {
@@ -50,6 +54,11 @@
         .content-text p {
             margin-left: 2rem;
         }
+
+        ::selection {
+            color: yellow;
+            background: rgba(0, 0, 0, 0.514);
+        }
     </style>
 
     <script src="https://kit.fontawesome.com/7763e5ee12.js" crossorigin="anonymous"></script>
@@ -64,11 +73,11 @@
             <a href="index.html"
                 class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                 <i class="fab fa-python" style="font-size: 2rem;"> </i>
-                <span class="fs-4">Python Flask</span>
+                <span class="fs-4"> Python Flask</span>
             </a>
 
             <ul class="nav nav-pills">
-                <li class="nav-item "><a href="#start" class="btn btn-dark btn-learn" aria-current="page">Start Learn
+                <li class="nav-item "><a href="#what" class="btn btn-dark btn-learn" aria-current="page">Start Learn
                     </a>
                 </li>
             </ul>
@@ -84,9 +93,9 @@
             <div class="col-lg-6 mx-auto">
                 <p class="lead mb-4">เรียนรู้ Flask micro web framework ที่เขียนด้วยภาษา python</p>
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-3">
-                    <a href="#start" class="btn btn-dark btn-lg px-4 me-sm-3">เริ่มกันเลย <i
+                    <a href="#what" class="btn btn-dark btn-lg px-4 me-sm-3">เริ่มกันเลย <i
                             class="fas fa-caret-down"></i></a>
-                    <a class="btn btn-outline-secondary btn-lg px-4">Github <i class="fab fa-github"></i></a>
+                    <a href="https://github.com/film8844/flask_app" target="_blank" class="btn btn-outline-secondary btn-lg px-4">Github <i class="fab fa-github"></i></a>
                 </div>
             </div>
             <div class="overflow-hidden" style="max-height: 30vh;">
@@ -104,186 +113,220 @@
 
     <!-- contant -->
     <div id="" class="container">
-        <div class="col">
-            <section class="">
-                <div class="container">
-                    <div class="content-text">
-                        <h2 class="h2">ทำความรู้จัก Flask</h2>
-                        <p>Flask คือ micro web framework ที่เขียนด้วย python. Flask ถูกจัดให้อยู่ใน microframework
-                            เพราะว่าไม่ต้องการใช้เครื่องมือหรือไลบารี่เฉพาะ ดังนั้นจึงมีแค่ที่จำเป็นเลยเล็ก
-                            แต่เขียนไม่กี่บรรทัดก็รันได้เลย Flask ไม่มีทั้ง database หรือการตรวจการตรวจแบบฟอร์ม (form
-                            validation) แต่ยังรองรับ extensions ที่ช่วยเพิ่มความสามารถอื่นได้ ถ้ารองรับการใช้กับ Flask
-                            ตัวอย่างเว็บ ที่นำ Flask ไปใช้ คือ Pinterest LinkedIn เป็นต้น </p>
+        <div class="row">
+            <div class="col-0 col-md-3">
+
+                <ul class="list-group sticky-top ">
+                    <div class="" style="height: 100px;"></div>
+                    <a href="#what" class="list-group-item list-group-item-action list-group-item-dark">Flask คืออะไร
+                        <i class="fas fa-angle-right"></i></a>
+
+                    <a href="#install" class="list-group-item list-group-item-action list-group-item-dark">Installation
+                        <i class="fas fa-angle-right"></i></a>
+
+                    <a href="#Setup" class="list-group-item list-group-item-action list-group-item-dark">Setup
+                        project <i class="fas fa-angle-right"></i></a>
+
+                    <a href="#start" class="list-group-item list-group-item-action list-group-item-dark">เริ่มต้น
+                        Code <i class="fas fa-angle-right"></i></a>
+
+                    <a href="#run"
+                        class="list-group-item list-group-item-action list-group-item-dark">ทดลองรันโค้ดเริ่มต้น <i
+                            class="fas fa-angle-right"></i></a>
+                    <a href="#route" class="list-group-item list-group-item-action list-group-item-dark">การเพิ่ม
+                        Route และการส่งค่าจาก URL <i class="fas fa-angle-right"></i></a>
+                    <a href="#templates" class="list-group-item list-group-item-action list-group-item-dark">การใช้
+                        HTML ด้วย render_template <i class="fas fa-angle-right"></i></a>
+                    <a href="#css" class="list-group-item list-group-item-action list-group-item-dark">การใช้ CSS
+                        ร่วมกับ HTML <i class="fas fa-angle-right"></i></a>
+                </ul>
+
+
+            </div>
+            <div class="col-12 col-md-9">
+                <section id="what">
+                    <div class="container">
+                        <div class="content-text">
+                            <h2 class="h2">ทำความรู้จัก Flask</h2>
+                            <p>Flask คือ micro web framework ที่เขียนด้วย python. Flask ถูกจัดให้อยู่ใน microframework
+                                เพราะว่าไม่ต้องการใช้เครื่องมือหรือไลบารี่เฉพาะ ดังนั้นจึงมีแค่ที่จำเป็นเลยเล็ก
+                                แต่เขียนไม่กี่บรรทัดก็รันได้เลย Flask ไม่มีทั้ง database หรือการตรวจการตรวจแบบฟอร์ม
+                                (form
+                                validation) แต่ยังรองรับ extensions ที่ช่วยเพิ่มความสามารถอื่นได้ ถ้ารองรับการใช้กับ
+                                Flask
+                                ตัวอย่างเว็บ ที่นำ Flask ไปใช้ คือ Pinterest LinkedIn เป็นต้น </p>
+                        </div>
+                        <div class="row justify-content-evenly align-items-center">
+                            <div class="col-lg-4 text-center">
+                                <i class="fab fa-pinterest" style="font-size: 6rem; color: #E60023;"></i>
+
+                                <h2>Pinterest</h2>
+                                <p>ปักหมุดภาพและวิดีโอที่เราสนใจและหลงรัก จากเว็บไซต์ต่างๆที่เราพบเจอ
+                                    และจากภาพและวิดีโอของเราเอง</p>
+
+                            </div><!-- /.col-lg-4 -->
+                            <div class="col-lg-4 text-center">
+                                <i class="fab fa-linkedin" style="font-size: 6rem; color: #0e76a8;"></i>
+                                <h2>LinkedIn</h2>
+                                <p>เครือข่ายมืออาชีพบนอินเทอร์เน็ตที่ใหญ่ที่สุดในโลก
+                                    เพื่อหางานที่เหมาะสมหรือการฝึกงานและเรียนรู้ทักษะที่คุณต้องการประสบความสําเร็จในอาชีพของคุณ.
+                                </p>
+
+                            </div><!-- /.col-lg-4 -->
+
+                        </div>
                     </div>
-                    <div class="row justify-content-evenly align-items-center">
-                        <div class="col-lg-4 text-center">
-                            <i class="fab fa-pinterest" style="font-size: 6rem; color: #E60023;"></i>
+                </section>
 
-                            <h2>Pinterest</h2>
-                            <p>ปักหมุดภาพและวิดีโอที่เราสนใจและหลงรัก จากเว็บไซต์ต่างๆที่เราพบเจอ
-                                และจากภาพและวิดีโอของเราเอง</p>
+                <section id="install" class="mt-5">
+                    <div class="container">
+                        <div class="content-text">
+                            <h2 class="h2">Installation for start Flask project</h2>
+                            <h5>
+                                <ul>
 
-                        </div><!-- /.col-lg-4 -->
-                        <div class="col-lg-4 text-center">
-                            <i class="fab fa-linkedin" style="font-size: 6rem; color: #0e76a8;"></i>
-                            <h2>LinkedIn</h2>
-                            <p>เครือข่ายมืออาชีพบนอินเทอร์เน็ตที่ใหญ่ที่สุดในโลก
-                                เพื่อหางานที่เหมาะสมหรือการฝึกงานและเรียนรู้ทักษะที่คุณต้องการประสบความสําเร็จในอาชีพของคุณ.
-                            </p>
+                                    <li>ติดตั้ง Python <a href="https://www.python.org/downloads/"> <span
+                                                class="badge rounded-pill bg-warning">version 3.6 or Newer</span> </a>
+                                    </li>
 
-                        </div><!-- /.col-lg-4 -->
+                                    <li>Create Virtual environments </li>
 
-                    </div>
-                </div>
-            </section>
-
-            <section id="start" class="mt-5">
-                <div class="container">
-                    <div class="content-text">
-                        <h2 class="h2">Installation for start Flask project</h2>
-                        <h5>
-                            <ul>
-
-                                <li>ติดตั้ง Python <a href="https://www.python.org/downloads/"> <span
-                                            class="badge rounded-pill bg-warning">version 3.6 or Newer</span> </a> </li>
-
-                                <li>Create Virtual environments </li>
-
-                                <pre><code>$ mkdir flaskproject
+                                    <pre><code>$ mkdir flaskproject
 $ cd flaskproject
 $ python -m venv fw
 </code></pre>
-                                <p>fw คือชื่อของ Virtual Environment ของโปรเจคท์นี้</p>
-                                <p>note: สำหรับ <span class="badge bg-primary"> <i class="fab fa-apple"></i> macOS/ <i
-                                            class="fab fa-linux"></i> linux </span> ให้ใช้คำสั่ง <span
-                                        class="badge rounded-pill bg-black">python3 -m venv env</span> </p>
-                                <li>Activate Virtual environments</li>
-                                <pre><code  >$ fw\scripts\activate</code></pre>
-                                <p>note2: สำหรับ <span class="badge bg-primary"><i class="fab fa-apple"></i> macOS/ <i
-                                            class="fab fa-linux"></i> linux </span> ให้ใช้คำสั่ง <span
-                                        class="badge rounded-pill bg-black">. env/bin/activate</span></p>
-                                <li>ติดตั้ง Flask</li>
-                                <pre><code  >$ pip install flask</code></pre>
-                            </ul>
-                            </h1>
+                                    <p>fw คือชื่อของ Virtual Environment ของโปรเจคท์นี้</p>
+                                    <p>note: สำหรับ <span class="badge bg-primary"> <i class="fab fa-apple"></i> macOS/
+                                            <i class="fab fa-linux"></i> linux </span> ให้ใช้คำสั่ง <span
+                                            class="badge rounded-pill bg-black">python3 -m venv env</span> </p>
+                                    <li>Activate Virtual environments</li>
+                                    <pre><code  >$ fw\scripts\activate</code></pre>
+                                    <p>note2: สำหรับ <span class="badge bg-primary"><i class="fab fa-apple"></i> macOS/
+                                            <i class="fab fa-linux"></i> linux </span> ให้ใช้คำสั่ง <span
+                                            class="badge rounded-pill bg-black">. env/bin/activate</span></p>
+                                    <li>ติดตั้ง Flask</li>
+                                    <pre><code  >$ pip install flask</code></pre>
+                                </ul>
+                                </h1>
 
 
+
+                        </div>
 
                     </div>
+                </section>
 
-                </div>
-            </section>
-
-            <section id="" class="mt-5">
-                <div class="container">
-                    <div class="content-text">
-                        <h2 class="h2">1. เริ่มต้น Setup project</h2>
-                        <br>
-                        <div class="row mb-3">
-                            <div class="col-md-5">
-                                <p>1.1 เปิด Visual Studio Code ขึ้นมา Open Folder เพื่อทำการเปิดโฟลเดอร์
-                                    flaskproject</p>
-                            </div>
-                            <div class="col-md-7">
-                                <img src="./img/st-1.png" width="100%" alt="" srcset="">
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <div class="col-5">
-                                <p>1.2 คลิ๊ก View → Command Palette…</p>
-                            </div>
-                            <div class="col-7">
-                                <div class="text-center mb-3">
-                                    <img src="./img/st-2.png" width="100%" alt="" srcset="">
+                <section id="Setup" class="mt-5">
+                    <div class="container">
+                        <div class="content-text">
+                            <h2 class="h2">1. เริ่มต้น Setup project</h2>
+                            <br>
+                            <div class="row mb-3">
+                                <div class="col-md-5">
+                                    <p>1.1 เปิด Visual Studio Code ขึ้นมา Open Folder เพื่อทำการเปิดโฟลเดอร์
+                                        flaskproject</p>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-5">
-                                <p>1.3 เลือก Python: Select Interpreter</p>
-                            </div>
-                            <div class="col-7">
-                                <div class="text-center mb-3">
-                                    <img src="./img/st-3.png" width="100%" alt="" srcset="">
+                                <div class="col-md-7">
+                                    <img src="./img/st-1.png" width="100%" alt="" srcset="">
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-5">
-                                <p>
-                                    1.4 คลิ๊ก View → Command Palette…
-                                </p>
-                            </div>
-                            <div class="col-7">
-                                <div class="text-center mb-3">
-                                    <img src="./img/st-4.png" width="100%" alt="" srcset="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-5">
-                                <p>
-                                    1.5 จากนั้นทำการคลิ๊ก Debug → Start Debugging อีกครั้ง
-                                </p>
-                            </div>
-                            <div class="col-7">
-                                <div class="text-center mb-3">
-                                    <img src="./img/st-5.png" width="100%" alt="" srcset="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-5">
-                                <p>
-                                    1.6 เลือก Python
-                                </p>
-                            </div>
-                            <div class="col-7">
-                                <div class="text-center mb-3">
-                                    <img src="./img/st-6.png" width="100%" alt="" srcset="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-5">
-                                <p>
-                                    1.7 เลือก Flask
-                                </p>
                             </div>
 
-                            <div class="col-7">
-                                <div class="text-center mb-3">
-                                    <img src="./img/st-7.png" width="100%" alt="" srcset="">
+                            <div class="row mb-3">
+                                <div class="col-5">
+                                    <p>1.2 คลิ๊ก View → Command Palette…</p>
+                                </div>
+                                <div class="col-7">
+                                    <div class="text-center mb-3">
+                                        <img src="./img/st-2.png" width="100%" alt="" srcset="">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-5">
-                                <p>
-                                    1.8 จะปรากฏชื่อไฟล์ app.py ซึ่งเป็นชื่อ Default ของ Flask กด Enter
-                                </p>
+                            <div class="row mb-3">
+                                <div class="col-5">
+                                    <p>1.3 เลือก Python: Select Interpreter</p>
+                                </div>
+                                <div class="col-7">
+                                    <div class="text-center mb-3">
+                                        <img src="./img/st-3.png" width="100%" alt="" srcset="">
+                                    </div>
+                                </div>
                             </div>
+                            <div class="row mb-3">
+                                <div class="col-5">
+                                    <p>
+                                        1.4 คลิ๊ก View → Command Palette…
+                                    </p>
+                                </div>
+                                <div class="col-7">
+                                    <div class="text-center mb-3">
+                                        <img src="./img/st-4.png" width="100%" alt="" srcset="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-5">
+                                    <p>
+                                        1.5 จากนั้นทำการคลิ๊ก Debug → Start Debugging อีกครั้ง
+                                    </p>
+                                </div>
+                                <div class="col-7">
+                                    <div class="text-center mb-3">
+                                        <img src="./img/st-5.png" width="100%" alt="" srcset="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-5">
+                                    <p>
+                                        1.6 เลือก Python
+                                    </p>
+                                </div>
+                                <div class="col-7">
+                                    <div class="text-center mb-3">
+                                        <img src="./img/st-6.png" width="100%" alt="" srcset="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-5">
+                                    <p>
+                                        1.7 เลือก Flask
+                                    </p>
+                                </div>
 
-                            <div class="col-7">
-                                <div class="text-center mb-3">
-                                    <img src="./img/st-8.png" width="100%" alt="" srcset="">
+                                <div class="col-7">
+                                    <div class="text-center mb-3">
+                                        <img src="./img/st-7.png" width="100%" alt="" srcset="">
+                                    </div>
                                 </div>
                             </div>
+                            <div class="row mb-3">
+                                <div class="col-5">
+                                    <p>
+                                        1.8 จะปรากฏชื่อไฟล์ app.py ซึ่งเป็นชื่อ Default ของ Flask กด Enter
+                                    </p>
+                                </div>
+
+                                <div class="col-7">
+                                    <div class="text-center mb-3">
+                                        <img src="./img/st-8.png" width="100%" alt="" srcset="">
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>
+                                เป็นอันเสร็จสิ้นขั้นตอนนี้
+                            </h4>
                         </div>
-                        <h4>
-                            เป็นอันเสร็จสิ้นขั้นตอนนี้
-                        </h4>
+
                     </div>
+                </section>
 
-                </div>
-            </section>
-
-            <section id="" class="mt-5">
-                <div class="container">
-                    <div class="">
-                        <h2 class="h2">สร้างไฟล์ <span class="badge bg-danger">app.py</span> ทำการเขียนโค้ดดังนี้</h2>
-                        <pre><code data-language="python">
+                <section id="start" class="mt-5">
+                    <div class="container">
+                        <div class="">
+                            <h2 class="h2">สร้างไฟล์ <span class="badge bg-danger">app.py</span> ทำการเขียนโค้ดดังนี้
+                            </h2>
+                            <pre><code data-language="python">
 from flask import Flask
                                     
 app = Flask(__name__)
@@ -296,78 +339,81 @@ if __name__ == '__main__':
     app.run(debug=True)
 </code></pre>
 
-                        <div class="text-start mt-3">
-                            <h3>อธิบายโค้ด</h3>
-                            <div class="row mb-3">
-                                <div class="col-6">
-                                    <pre><code data-language="python">from flask import Flask</code></pre>
-                                    <p>บรรทัดแรกจะเป็นการอิมพอร์ต Flask จากโมดูล flask เพื่อสร้าง Flask
-                                        เว็บเซิร์ฟเวอร์ของ
-                                        Flask App จากโมดูล Flask</p>
+                            <div class="text-start mt-3">
+                                <h3>อธิบายโค้ด</h3>
+                                <div class="row mb-3">
+                                    <div class="col-6">
+                                        <pre><code data-language="python">from flask import Flask</code></pre>
+                                        <p>บรรทัดแรกจะเป็นการอิมพอร์ต Flask จากโมดูล flask เพื่อสร้าง Flask
+                                            เว็บเซิร์ฟเวอร์ของ
+                                            Flask App จากโมดูล Flask</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <pre><code data-language="python">app = Flask(__name__)</code></pre>
+                                        <p>คำสั่งนี้จะใช้บ่งบอกว่า ไฟล์นี้คือไฟล์ Main ที่จะเอาไว้รัน Flask App
+                                            ของเรานั่นเอง
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="col-6">
-                                    <pre><code data-language="python">app = Flask(__name__)</code></pre>
-                                    <p>คำสั่งนี้จะใช้บ่งบอกว่า ไฟล์นี้คือไฟล์ Main ที่จะเอาไว้รัน Flask App
-                                        ของเรานั่นเอง
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-6">
-                                    <pre><code data-language="python">@app.route("/")
+                                <div class="row">
+                                    <div class="col-6">
+                                        <pre><code data-language="python">@app.route("/")
 def hello_world():
     return "<p>Hello, World!</p>"</code></pre>
-                                    <p>ส่วนต่อมาจะเป็นการสร้าง URL เพื่อทำการชี้หรือ Map ไปที่ URLs ที่ต้องการ
-                                        โดยในที่นี้ จะเป็นหน้า URL เริ่มต้น ซึ่งส่วนใหญ่หรือแทบจะทุกเว็บจะใช้ URL
-                                        นี้เป็นหน้าโฮมเพจหรือที่อยู่ของเว็บไซต์</p>
-                                </div>
-                                <div class="col-6">
-                                    <pre><code data-language="python">if __name__ == '__main__':
+                                        <p>ส่วนต่อมาจะเป็นการสร้าง URL เพื่อทำการชี้หรือ Map ไปที่ URLs ที่ต้องการ
+                                            โดยในที่นี้ จะเป็นหน้า URL เริ่มต้น ซึ่งส่วนใหญ่หรือแทบจะทุกเว็บจะใช้ URL
+                                            นี้เป็นหน้าโฮมเพจหรือที่อยู่ของเว็บไซต์</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <pre><code data-language="python">if __name__ == '__main__':
     app.run(debug=True)</code></pre>
-                                    <p>ส่วนสุดท้ายจะเป็นการรัน Flask และทำการเปิด Debug Mode เพื่อใช้สำหรับติดตาม Error
-                                        ต่าง ๆ ได้
+                                        <p>ส่วนสุดท้ายจะเป็นการรัน Flask และทำการเปิด Debug Mode เพื่อใช้สำหรับติดตาม
+                                            Error
+                                            ต่าง ๆ ได้
 
-                                    </p>
-                                    <p>ปล. เวลา Deploy ให้ปิด Debug Mode โดยใช้ debug=False</p>
+                                        </p>
+                                        <p>ปล. เวลา Deploy ให้ปิด Debug Mode โดยใช้ debug=False</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section id="" class="mt-5">
-                <div class="container">
-                    <h2>ทดลองรันโค้ดข้างต้น</h2>
-                    <pre><code data-language="python">$ flask run</code></pre>
-                    <p>โดยตัว Default ที่ผมกำลังรันอยู่ในตอนนี้คือ localhost หรือไอพีแอดเดรส 127.0.0.1 พอร์ต Default ของ
-                        Flask คือ 5000 สุดท้ายเมื่อรันแล้วทำการเปิดหน้าเว็บบราวเซอร์จะพบ 127.0.0.1:5000 </p>
-                    <div class="text-center mb-5">
-                        <img src="./img/run.png" width="80%" alt="" srcset="">
+                <section id="run" class="mt-5">
+                    <div class="container">
+                        <h2>ทดลองรันโค้ดข้างต้น</h2>
+                        <pre><code data-language="python">$ flask run</code></pre>
+                        <p>โดยตัว Default ที่ผมกำลังรันอยู่ในตอนนี้คือ localhost หรือไอพีแอดเดรส 127.0.0.1 พอร์ต Default
+                            ของ
+                            Flask คือ 5000 สุดท้ายเมื่อรันแล้วทำการเปิดหน้าเว็บบราวเซอร์จะพบ 127.0.0.1:5000 </p>
+                        <div class="text-center mb-5">
+                            <img src="./img/run.png" width="80%" alt="" srcset="">
+                        </div>
+
+                        <p>เมื่อเราเข้าไปที่ http://127.0.0.1:5000 หรือ http://localhost:5000/
+                            ก็ได้หน้าเว็บมาแล้วเรียบร้อย
+                            และนี่ก็คือหน้าเว็บจริง ๆ
+                            ครับ โดยในหน้าเว็บนี้แสดงผลคำว่า “Hello My First Flask Project”
+                            ที่ผมได้เขียนฟังก์ชันจากนั้นทำการรีเทิร์น ข้อความนี้ออกมาที่ URL ที่เป็นหน้า Default
+                            คือหน้าเริ่มต้นของเว็บ ซึ่งปกติเราจะใช้หน้านี้เป็นหน้าโฮมเพจ </p>
+                        <div class="text-center mb-5">
+                            <img src="./img/webrun.png" width="80%" alt="" srcset="">
+                            <p>http://127.0.0.1:5000</p>
+                        </div>
                     </div>
+                </section>
 
-                    <p>เมื่อเราเข้าไปที่ http://127.0.0.1:5000 หรือ http://localhost:5000/ ก็ได้หน้าเว็บมาแล้วเรียบร้อย
-                        และนี่ก็คือหน้าเว็บจริง ๆ
-                        ครับ โดยในหน้าเว็บนี้แสดงผลคำว่า “Hello My First Flask Project”
-                        ที่ผมได้เขียนฟังก์ชันจากนั้นทำการรีเทิร์น ข้อความนี้ออกมาที่ URL ที่เป็นหน้า Default
-                        คือหน้าเริ่มต้นของเว็บ ซึ่งปกติเราจะใช้หน้านี้เป็นหน้าโฮมเพจ </p>
-                    <div class="text-center mb-5">
-                        <img src="./img/webrun.png" width="80%" alt="" srcset="">
-                        <p>http://127.0.0.1:5000</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="" class="mt-5">
-                <div class="container">
-                    <h2>การเพิ่ม route และใส่ค่าลงไปใน url ได้เพื่อนำค่านั้นไปใช้ </h2>
-                    <p>เพิ่ม code ส่วนนี้เข้าไป ใน <span class="badge bg-danger">app.py</span></p>
-                    <pre><code data-language="python">@app.route('/hello/<name>')
+                <section id="route" class="mt-5">
+                    <div class="container">
+                        <h2>การเพิ่ม route และใส่ค่าลงไปใน url ได้เพื่อนำค่านั้นไปใช้ </h2>
+                        <p>เพิ่ม code ส่วนนี้เข้าไป ใน <span class="badge bg-danger">app.py</span></p>
+                        <pre><code data-language="python">@app.route('/hello/<name>')
 def hello_name(name):
     return "hello {}. ".format(name)</code></pre>
 
-                    <p>จะได้</p>
-                    <pre><code data-language="python">
+                        <p>จะได้</p>
+                        <pre><code data-language="python">
 from flask import Flask
                                                             
 app = Flask(__name__)
@@ -383,28 +429,30 @@ def hello_name(name):
 if __name__ == '__main__':
     app.run(debug=True)</code></pre>
 
-                    <p>แล้ว ลอง http://localhost:5000/hello/ชื่อ หรือ ข้อความที่่ต้องการให้แสดง
-                        ก็จะได้</p>
-                    <div class="text-center mb-5">
-                        <img src="./img/route.png" width="80%" alt="" srcset="">
-                        <p>http://127.0.0.1:5000/hello/Film</p>
+                        <p>แล้ว ลอง http://localhost:5000/hello/ชื่อ หรือ ข้อความที่่ต้องการให้แสดง
+                            ก็จะได้</p>
+                        <div class="text-center mb-5">
+                            <img src="./img/route.png" width="80%" alt="" srcset="">
+                            <p>http://127.0.0.1:5000/hello/Film</p>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section id="" class="mt-5">
-                <div class="container">
-                    <h2>การใช้งาน render_template </h2>
-                    <p>สร้าง folder ที่ชื่อว่า <span class="badge bg-info">templates</span>
-                        ใช้เก็บไฟล์ที่ใช้ในการแสดงผลเป็นหน้าเว็บ (html)</p>
-                    <div class="text-center mb-5">
-                        <img src="./img/templatesF.png" width="50%" alt="" srcset="">
-                        <p>create templates</p>
-                    </div>
-                    <p>เข้าไปใน <span class="badge bg-info">templates</span></p>
-                    <p>สร้างไฟล์ <span class="badge bg-danger">home.html</span>
-                        ซึ่งจะเป็นหน้าเว็บของเรา</p>
-                    <pre><code data-language="html">
+                <section id="templates" class="mt-5">
+                    <div class="container">
+                        <h2>การใช้งาน render_template เพื่อใช้ html <i class="fab fa-html5" style="color: #f06529;"></i>
+                        </h2>
+                        <p>สร้าง folder ที่ชื่อว่า <span class="badge bg-info">templates</span>
+                            ใช้เก็บไฟล์ที่ใช้ในการแสดงผลเป็นหน้าเว็บ (html <i class="fab fa-html5"
+                                style="color: #f06529;"></i> )</p>
+                        <div class="text-center mb-5">
+                            <img src="./img/templatesF.png" width="50%" alt="" srcset="">
+                            <p>create templates</p>
+                        </div>
+                        <p>เข้าไปใน <span class="badge bg-info">templates</span></p>
+                        <p>สร้างไฟล์ <span class="badge bg-danger">home.html</span>
+                            ซึ่งจะเป็นหน้าเว็บของเรา</p>
+                        <pre><code data-language="html">
 &lt;html>
     &lt;head>
         &lt;title> {{ title }}&lt;/title>
@@ -413,8 +461,8 @@ if __name__ == '__main__':
         &lt;h1> you may already know this is home page &lt;/h1>               
     &lt;/body>
 &lt;/html></code></pre>
-                    <p>และ <span class="badge bg-danger">hello.html</span> หน้าสวัสดีชื่อของเรา</p>
-                    <pre><code data-language="html">
+                        <p>และ <span class="badge bg-danger">hello.html</span> หน้าสวัสดีชื่อของเรา</p>
+                        <pre><code data-language="html">
 &lt;html>
     &lt;head>
         &lt;title> {{ title }}&lt;/title>
@@ -423,9 +471,9 @@ if __name__ == '__main__':
         &lt;h1> hello I know you! you are {{name}} &lt;/h1>               
     &lt;/body>
 &lt;/html></code></pre>
-                    <p>และแก้ใน <span class="badge bg-danger">app.py</span>
-                        เพิ่ม render_template และใช้มัน render หน้าเว็บขึ้นมา และส่งตัวแปรไปด้วย</p>
-                    <pre><code data-language="python">
+                        <p>และแก้ใน <span class="badge bg-danger">app.py</span>
+                            เพิ่ม render_template และใช้มัน render หน้าเว็บขึ้นมา และส่งตัวแปรไปด้วย</p>
+                        <pre><code data-language="python">
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -441,55 +489,55 @@ def hello_name(name):
                                                 
 if __name__ == '__main__':
     app.run(debug=True)</code></pre>
-                    <h5>ผลลัพธ์:</h5>
-                    <div class="row mb-3">
-                        <div class="text-center col ">
-                            <p><span class="badge bg-danger">home.html</span></p>
-                            <img src="./img/home.png" width="100%" alt="" srcset="">
-                            <p>http://127.0.0.1:5000/</p>
+                        <h5>ผลลัพธ์:</h5>
+                        <div class="row mb-3">
+                            <div class="text-center col ">
+                                <p><span class="badge bg-danger">home.html</span></p>
+                                <img src="./img/home.png" width="100%" alt="" srcset="">
+                                <p>http://127.0.0.1:5000/</p>
+                            </div>
+                            <div class="text-center col">
+                                <p><span class="badge bg-danger">hello.html</span></p>
+                                <img src="./img/hello.png" width="100%" alt="" srcset="">
+                                <p>http://127.0.0.1:5000/hello/Film</p>
+                            </div>
                         </div>
-                        <div class="text-center col">
-                            <p><span class="badge bg-danger">hello.html</span></p>
-                            <img src="./img/hello.png" width="100%" alt="" srcset="">
-                            <p>http://127.0.0.1:5000/hello/Film</p>
+
+                        <p>{{ title }} แสดงค่าของตัวแปร title</p>
+                        <p>{{ name }} แสดงค่าของตัวแปร name</p>
+                        <p> ซึ่งเป็นค่าที่ส่งมาจากแอปหลักในการ render_template นั้นเอง</p>
+                        <p>หลังจากนี้เราก็สามารถปรับแต่งหน้าเว็บเราในไฟล์ template ได้เลยแล้วให้โปรแกรม render template
+                            ออกมา</p>
+                    </div>
+                </section>
+
+                <section id="css" class="mt-5">
+                    <div class="container">
+                        <h2>มาเริ่มลุย CSS <i style="color: #2965f1;" class="fab fa-css3-alt"></i> กันเลยครับ </h2>
+                        <p>สร้าง folder ที่ชื่อว่า <span class="badge bg-info">static/css</span>
+                            ทำการสร้างไฟล์ CSS ขึ้นมา 1 ไฟล์ ในโฟลเดอร์ <span class="badge bg-info">static/css</span>
+                            โดยตั้งชื่อว่า <span class=" badge bg-danger">style.css</span> </p>
+                        <div class="text-center mb-5">
+                            <img src="./img/static.png" width="50%" alt="" srcset="">
+                            <p>create style.css</p>
                         </div>
-                    </div>
 
-                    <p>{{ title }} แสดงค่าของตัวแปร title</p>
-                    <p>{{ name }} แสดงค่าของตัวแปร name</p>
-                    <p> ซึ่งเป็นค่าที่ส่งมาจากแอปหลักในการ render_template นั้นเอง</p>
-                    <p>หลังจากนี้เราก็สามารถปรับแต่งหน้าเว็บเราในไฟล์ template ได้เลยแล้วให้โปรแกรม render template
-                        ออกมา</p>
-                </div>
-            </section>
-
-            <section id="" class="mt-5">
-                <div class="container">
-                    <h2>มาเริ่มลุย CSS กันเลยครับ </h2>
-                    <p>สร้าง folder ที่ชื่อว่า <span class="badge bg-info">static/css</span>
-                        ทำการสร้างไฟล์ CSS ขึ้นมา 1 ไฟล์ ในโฟลเดอร์ <span class="badge bg-info">static/css</span>
-                        โดยตั้งชื่อว่า <span class=" badge bg-danger">style.css</span> </p>
-                    <div class="text-center mb-5">
-                        <img src="./img/static.png" width="50%" alt="" srcset="">
-                        <p>create style.css</p>
-                    </div>
-
-                    <p>ในไฟล์ <span class="badge bg-danger">style.css</span>
-                        ใส่ style ที่เราต้องการ</p>
-                    <pre><code data-language="css">
+                        <p>ในไฟล์ <span class="badge bg-danger">style.css</span>
+                            ใส่ style ที่เราต้องการ</p>
+                        <pre><code data-language="css">
 body{
     background-color: darksalmon;
 }
 h1{
     color: white;
 }</code></pre>
-                    <p>และ แก้ไขไฟล์ <span class="badge bg-danger">home.html</span> เพื่อทำการ import ไฟล์ css
-                        ของเรามาใช้</p>
-                    <pre><code data-language="html">&lt;link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css')}}"></code></pre>
-                    <pre><code data-language="html">
+                        <p>และ แก้ไขไฟล์ <span class="badge bg-danger">home.html</span> เพื่อทำการ import ไฟล์ css
+                            ของเรามาใช้</p>
+                        <pre><code data-language="html">&lt;link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css')}}"></code></pre>
+                        <pre><code data-language="html">
 &lt;html>
     &lt;head>
-        &lt;link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css') }">
+        &lt;link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css')}}">
         &lt;title> {{ title }}&lt;/title>
     &lt;/head>
     &lt;body>                  
@@ -498,20 +546,22 @@ h1{
 &lt;/html></code></pre>
 
 
-                    <h5>ผลลัพธ์:</h5>
-                    <div class="text-center col ">
-                        <p>หน้า <span class="badge bg-danger">home.html</span> ที่ได้ทำการอิมพอร์ต CSS
-                            สไตล์มาจากไฟล์ภายนอกที่ได้เขียนแยกไว้</p>
-                        <img src="./img/css.png" width="50%" alt="" srcset="">
-                        <p>http://127.0.0.1:5000/</p>
+                        <h5>ผลลัพธ์:</h5>
+                        <div class="text-center col ">
+                            <p>หน้า <span class="badge bg-danger">home.html</span> ที่ได้ทำการอิมพอร์ต CSS
+                                สไตล์มาจากไฟล์ภายนอกที่ได้เขียนแยกไว้</p>
+                            <img src="./img/css.png" width="80%" alt="" srcset="">
+                            <p>http://127.0.0.1:5000/</p>
+                        </div>
+
+
+
                     </div>
+                </section>
 
-
-
-                </div>
-            </section>
-
+            </div>
         </div>
+
     </div>
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -563,7 +613,7 @@ h1{
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
+    <!-- <script>
         $(document).ready(function () {
             // Add smooth scrolling to all links
             $("a").on('click', function (event) {
@@ -588,7 +638,7 @@ h1{
                 } // End if
             });
         });
-    </script>
+    </script> -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
         crossorigin="anonymous"></script>
