@@ -22,31 +22,25 @@
 
     ?>
 
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-        <div class="row g-3 align-items-center">
-            <div class="col-auto">
-                <label for="inputPassword6" class="col-form-label">Choose a tourist attraction</label>
-            </div>
-            <div class="col-auto">
-                <select class="form-select" name="tr" id="inputGroupSelect02">
-                    <option selected>Choose...</option>
-                    <?php
-                    foreach ($result['places'] as $key) {
-                        echo "<option value=\"" . $key['name'] . "\">" . $key['name'] . "</option>";
-                    }
-                    ?>
-                </select>
-            </div>
-            <div class="col-auto">
-                <input type="submit" value="Find!" class="btn btn-success">
-            </div>
-        </div>
-    </form>
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        echo "name " . $_POST["tr"];
-    } ?>
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label for="inputPassword6" class="col-form-label">Choose a tourist attraction</label>
+        </div>
+        <div class="col-auto">
+            <select class="form-select" name="name" id="name">
+                <option selected>Choose...</option>
+                <?php
+                foreach ($result['places'] as $key) {
+                    echo "<option value=\"" . $key['name'] . "\">" . $key['name'] . "</option>";
+                }
+                ?>
+            </select>
+        </div>
+        <div class="col-auto">
+            <input type="submit" value="Find!" onclick="byname()" class="btn btn-success">
+        </div>
+    </div>
 
     <div id="map"></div>
     <iframe id="map1" src="" frameborder="0" allowfullscreen>
@@ -60,13 +54,10 @@
             console.log(name)
             <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
+                $n = $_POST["tr"];
                 echo $_POST["tr"];
             } ?>
-            document.getElementById('map1').src = 'https://maps.google.com/maps?q=' + <?php
-                                                                                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                                                                                            echo $_POST["tr"];
-                                                                                        } ?> + '&t=&z=15&ie=UTF8&iwloc=&output=embed';
+            document.getElementById('map1').src = 'https://maps.google.com/maps?q=' + name + '&t=&z=15&ie=UTF8&iwloc=&output=embed';
 
         }
         // var image = 'http://10.0.15.20/lab10/images/pin-location-1.png';
