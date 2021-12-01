@@ -11,37 +11,38 @@
 </head>
 
 <body>
-    <?php
-    $url = "http://161.246.38.86/final-restapi/places";
-    $response = file_get_contents($url);
-    $result = json_decode($response, true);
-   
+    <div class="container mt-5">
+        <?php
+        $url = "http://161.246.38.86/final-restapi/places";
+        $response = file_get_contents($url);
+        $result = json_decode($response, true);
+        ?>
 
-    ?>
 
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <label for="inputPassword6" class="col-form-label">Choose a tourist attraction</label>
+            </div>
+            <div class="col-auto">
+                <select class="form-select" name="name" id="name">
+                    <option selected>Choose...</option>
+                    <?php
+                    foreach ($result['places'] as $key) {
+                        echo "<option value=\"" . $key['name'] . "\">" . $key['name'] . "</option>";
+                    }
+                    ?>
+                </select>
+            </div>
+            <div class="col-auto">
+                <input type="submit" value="Find!" onclick="byname()" class="btn btn-success">
+            </div>
+        </div>
 
-    <div class="row g-3 align-items-center">
-        <div class="col-auto">
-            <label for="inputPassword6" class="col-form-label">Choose a tourist attraction</label>
-        </div>
-        <div class="col-auto">
-            <select class="form-select" name="name" id="name">
-                <option selected>Choose...</option>
-                <?php
-                foreach ($result['places'] as $key) {
-                    echo "<option value=\"" . $key['name'] . "\">" . $key['name'] . "</option>";
-                }
-                ?>
-            </select>
-        </div>
-        <div class="col-auto">
-            <input type="submit" value="Find!" onclick="byname()" class="btn btn-success">
-        </div>
+        <div id="map"></div>
+        <iframe id="map1" width="100%" height="80%" src="" frameborder="0" allowfullscreen>
+        </iframe>
     </div>
 
-    <div id="map"></div>
-    <iframe id="map1" src="" frameborder="0" allowfullscreen>
-    </iframe>
 
     <script>
         function byname() {
@@ -57,7 +58,6 @@
             document.getElementById('map1').src = 'https://maps.google.com/maps?q=' + name + '&t=&z=15&ie=UTF8&iwloc=&output=embed';
 
         }
-        // var image = 'http://10.0.15.20/lab10/images/pin-location-1.png';
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrDlvhrrzIPfuW5j-yNXKphYh9HTZplW8">
     </script>
