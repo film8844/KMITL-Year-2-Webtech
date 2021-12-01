@@ -26,13 +26,6 @@
                 <input class="btn btn-warning" type="submit" id="submit" value="Submit">
             </form>
         </div>
-        
-
-
-
-
-
-
     </div>
 
 
