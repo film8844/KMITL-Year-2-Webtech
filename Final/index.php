@@ -22,24 +22,57 @@
 
     ?>
 
-    <div class="row g-3 align-items-center">
-        <div class="col-auto">
-            <label for="inputPassword6" class="col-form-label">Choose a tourist attraction</label>
-        </div>
-        <div class="col-auto">
-            <select class="form-select" id="inputGroupSelect02">
-                <option selected>Choose...</option>
-                <?php 
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <label for="inputPassword6" class="col-form-label">Choose a tourist attraction</label>
+            </div>
+            <div class="col-auto">
+                <select class="form-select" name="tr" id="inputGroupSelect02">
+                    <option selected>Choose...</option>
+                    <?php
                     foreach ($result['places'] as $key) {
-                        echo "<option value=\"".$key['location']."\">".$key['name']."</option>";
+                        echo "<option value=\"" . $key['name'] . "\">" . $key['name'] . "</option>";
                     }
-                ?>
-            </select>
+                    ?>
+                </select>
+            </div>
+            <div class="col-auto">
+                <input type="submit" value="Find!" class="btn btn-success">
+            </div>
         </div>
-        <div class="col-auto">
-            <input type="submit" value="Find!" class="btn btn-success">
-        </div>
-    </div>
+    </form>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+        echo "name " . $_POST["tr"];
+    } ?>
+
+    <div id="map"></div>
+    <iframe id="map1" src="" frameborder="0" allowfullscreen>
+    </iframe>
+
+    <script>
+        function byname() {
+            document.getElementById("map1").style.display = "block";
+            document.getElementById("map").style.display = "none";
+            var name = document.getElementById("name").value;
+            console.log(name)
+            <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+                echo $_POST["tr"];
+            } ?>
+            document.getElementById('map1').src = 'https://maps.google.com/maps?q=' + <?php
+                                                                                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                                                                                            echo $_POST["tr"];
+                                                                                        } ?> + '&t=&z=15&ie=UTF8&iwloc=&output=embed';
+
+        }
+        // var image = 'http://10.0.15.20/lab10/images/pin-location-1.png';
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrDlvhrrzIPfuW5j-yNXKphYh9HTZplW8">
+    </script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
